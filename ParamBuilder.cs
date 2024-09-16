@@ -12,10 +12,10 @@ namespace ParameterBuilder
         {
             this.ParamsDictionary = ParamsDictionary;
             this.BaseUri = BaseUri;
-        } 
+        }
         public Uri GetUri() 
         {
-            if (BaseUri is null) throw new ArgumentNullException($"Def ine {nameof(BaseUri)} in construction or by setting the property");
+            if (BaseUri is null) throw new ArgumentNullException($"Define {nameof(BaseUri)} in construction or by setting the property");
 
             return new Uri(CreateUri(BaseUri.ToString()));
         }
